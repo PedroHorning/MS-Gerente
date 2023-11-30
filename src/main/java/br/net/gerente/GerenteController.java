@@ -31,10 +31,10 @@ public class GerenteController {
     public Gerente Gerente(@PathVariable Integer id, @RequestBody Gerente gerenteData) {
     	Gerente gerente = gerenteRepository.findById(id).orElse(null);
         if (gerente != null) {
-        	gerente.setNome(gerenteData.getNome());
+        	gerente.setName(gerenteData.getName());
         	gerente.setEmail(gerenteData.getEmail());
         	gerente.setCpf(gerenteData.getCpf());
-        	gerente.setTelefone(gerenteData.getTelefone());
+        	gerente.setCellphone(gerenteData.getCellphone());
 
             return gerenteRepository.save(gerente);
         }

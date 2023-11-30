@@ -17,7 +17,7 @@ public class Gerente {
 	 private Integer id;
 
 	 @Column(name = "nome")
-	 private String nome;
+	 private String name;
 	 
 	 @Column(name = "email")
 	 private String email;
@@ -25,8 +25,11 @@ public class Gerente {
 	 @Column(name = "cpf")
 	 private String cpf;
 	 
+	 @Column(name = "type")
+	 private String type;
+	 
 	 @Column(name = "telefone")
-	 private String telefone;
+	 private String cellphone;
 	 
 	 public Integer getId() {
 	    return id;
@@ -36,12 +39,12 @@ public class Gerente {
 	    this.id = id;
 	 }
 
-	 public String getNome() {
-	    return nome;
+	 public String getName() {
+	    return name;
 	 }
 
-	 public void setNome(String nome) {
-	    this.nome = nome;
+	 public void setName(String name) {
+	    this.name = name;
 	 }
 
 	 public String getEmail() {
@@ -59,12 +62,20 @@ public class Gerente {
 	 public void setCpf(String cpf) {
 	    this.cpf = cpf;
 	 }
+	 
+	 public String getType() {
+		    return type;
+		 }
 
-	 public String getTelefone() {
-	    return telefone;
+		 public void setType(String type) {
+		    this.type = type;
+		 }
+
+	 public String getCellphone() {
+	    return cellphone;
 	 }
 
-	 public void setTelefone(String telefone) {
-	    this.telefone = telefone;
+	 public void setCellphone(String cellphone) {
+	    this.cellphone = cellphone;
 	 }
 }
